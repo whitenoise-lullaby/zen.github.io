@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+    <script>
+    function getMobileOperatingSystem() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+          // Windows Phone must come first because its UA also contains "Android"
+        if (/windows phone/i.test(userAgent)) {
+            return "Windows Phonee";
+        }
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+
+        return "unknown";
+    }</script>
+
+    <script>
+    function DetectAndServe(){
+        let os = getMobileOperatingSystem();
+        if (os == "Android") {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.nts.relaxco";
+        } else if (os == "iOS") {
+            window.location.href = "https://apps.apple.com/tr/app/white-noise-lullaby-baby-sleep/id1459804967";
+        } else if (os == "Windows Phonee") {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.nts.relaxco";
+        } else {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.nts.relaxco";
+        }
+    }
+    </script>
+    </head>
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>White Noise & Lullaby</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">White Noise & Lullaby </a>
+      <a class="btn btn-primary" onclick="DetectAndServe()"  href="#">Download</a>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">White Noise & Lullaby</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-magic-wand m-auto text-primary"></i>
+            </div>
+            <h3>White Noise</h3>
+            <p class="lead mb-0">Hairdryer, Vacuum Cleaner, Hoover...</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-music-tone-alt m-auto text-primary"></i>
+            </div>
+            <h3>Lullaby</h3>
+            <p class="lead mb-0">Lots Of Miracle Lullabies</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-playlist m-auto text-primary"></i>
+            </div>
+            <h3>Usable Functions</h3>
+            <p class="lead mb-0">Mix, Fade-out, Timer...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>White Noise</h2>
+          <p class="lead mb-0">Here is some of slumber white noise:
+          <br>
+          <br>
+          <ul>
+            <li>Hairdryer</li>
+            <li>Vacuum Cleaner (Hoover)</li>
+            <li>Washing Machine / Dishwasher</li>
+            <li>Womb (Mom)</li>
+            <li>Car / Highway</li>
+            <li>Fan</li>
+            <li>Train and more...</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Lullaby</h2>
+          <p class="lead mb-0">Here is some of selected soothing lullaby:
+          <br>
+          <br>
+          <ul>
+            <li>Wiegenlied Brahms</li>
+            <li>Twinkle Twinkle Little Star</li>
+            <li>Washing Machine / Dishwasher</li>
+            <li>Rock A Bye Baby</li>
+            <li>Hush Little Baby</li>
+            <li>Jingle Bells ( Christmas Song) and more...</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Usable Functions</h2>
+          <p class="lead mb-0">Here is funcitons that helps parents to get sleep baby:
+          <br>
+          <br>
+          <ul>
+            <li>Timer - You can set the duration you want to play </li>
+            <li>Mix - You can mix different white noises and lullabies </li>
+            <li>Airplane Mode - You can play white noises and lullabies when airplane mode ON</li>
+            <li>Volume FadeOUT - Volume will be automatically down and down </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">What people are saying...</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0">"Really very helpful app! Due to the different sounds and possible combinations there is really something for everyone. As a result, my five-month-old daughter falls asleep more easily. My two-year-old usually becomes very calm when I turn on the app for my little one and I have to admit that it also relaxes me."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+            <h5>Sarah S.</h5>
+            <p class="font-weight-light mb-0">"First app tried and no need to test another one. I like the timer and variety of lullabies and white noises that you can mix. l use it since a few weeks to sleep-train my 3 months old baby, and so far so good. Thank you."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+            <h5>Fred W.</h5>
+            <p class="font-weight-light mb-0">"This app is magical! We have been using it for 8 months both myself and my husband, it is indispensable when the little girl has trouble falling asleep, with these music she relaxes immediately. Highly recommended!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4">Ready to get started? Download! </h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+           <a class="btn btn-primary" onclick="DetectAndServe()"  href="#">Download & Sleep </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
